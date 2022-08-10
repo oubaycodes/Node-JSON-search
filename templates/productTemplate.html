@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #b92b27, #1565c0);
+      font-size: 62.5%;
+      font-family: sans-serif;
+      color: #f1f3f5;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin: 1.4rem;
+    }
+    .container-info {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+    }
+    main {
+      margin-top: 6.4rem;
+    }
+    .container-info {
+      font-size: 2rem;
+    }
+    .price {
+      font-size: 2.4rem;
+    }
+  </style>
+  <body>
+    <h1>Search result:</h1>
+    <div class="container">
+      <main>
+        <img src="" alt="" />
+        <div class="container-info">
+          <p class="label-info">Model name:</p>
+          <span class="model-name">{%MODELNAME%}</span>
+        </div>
+        <div class="container-info">
+          <p class="label-info">Left in stock:</p>
+          <span class="quantity">{%QUANTITY%}</span>
+        </div>
+        <div class="container-info">
+          <p class="label-info">Screen price:</p>
+          <span class="price">{%SCREENPRICE%}</span>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

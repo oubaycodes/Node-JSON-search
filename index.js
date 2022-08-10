@@ -13,19 +13,31 @@ const findModel = async function (name) {
       (model) => model.modelName.toLowerCase() === name.toLowerCase()
     );
     if (!modelResult) throw new Error("No result found!");
-    console.log(modelResult);
+
+    return modelResult;
   } catch (err) {
     console.error(`Unexpected error: ${err.message}`);
   }
 };
-const server = http.createServer((req, res) => {
-  console.log("shit");
-});
 
-readline.question(`Which model do you want:\n`, (name) => {
-  findModel(name);
+const replaceTemplate = async function (template, dataObj) {
+  const foo = await dataObj;
+  const templateData = await fs.readFile(template, "utf-8");
+  let output = templateData.replaceAll("{%MODELNAME%}", dataObj.modelName);
+  output = output.replaceAll("{%QUANTITY%}", dataObj.quantity);
+  output = output.replaceAll("{%SCREENPRICE%}", dataObj.screenPrice);
+  return output;
+};
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-type": "text/html" });
+  // console.log(template);
+  // res.end(template);
+  readline.close();
+});
+readline.question(`Which model do you want:\n`, (modelName) => {
   server.listen(8000, () => {
     console.log(`Listening on port ${server.address().port}`);
   });
-  readline.close;
+
+  replaceTemplate("./templates/productTemplate.html", findModel(modelName));
 });
