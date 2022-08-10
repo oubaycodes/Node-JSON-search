@@ -1,6 +1,56 @@
 [
   {
     "modelName": "S10",
-    "screenPrice": 130
+    "companyName": "Samsung",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "a10",
+    "companyName": "Samsung",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "a20s",
+    "companyName": "Samsung",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "a8",
+    "companyName": "Samsung",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "Iphone x",
+    "companyName": "Apple",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "P smart",
+    "companyName": "Huawei",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "test phone",
+    "companyName": "Apple",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "iphone 8",
+    "companyName": "Apple",
+    "screenPrice": 130,
+    "quantity": 10
+  },
+  {
+    "modelName": "iphone 7",
+    "companyName": "Apple",
+    "screenPrice": 130,
+    "quantity": 10
   }
 ]
