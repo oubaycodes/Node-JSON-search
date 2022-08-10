@@ -4,7 +4,6 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-readline.question(`Which model do you want`, (name) => {
-  console.log(`${name}!`);
+readline.question(`Which model do you want:\n`, (name) => {
   readline.close();
 });
